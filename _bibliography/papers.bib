@@ -1,36 +1,18 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true}
+@misc{mammodl,
+      abbr = {arXiv},
+      title={MammoDL: Mammographic Breast Density Estimation using Federated Learning}, 
+      author={Ramya Muthukrishnan and Angelina Heyler and Keshava Katti and Sarthak Pati and Walter Mankowski and Aprupa Alahari and Michael Sanborn and Emily F. Conant and Christopher Scott and Stacey Winham and Celine Vachon and Pratik Chaudhari and Despina Kontos and Spyridon Bakas},
+      year={2022},
+      eprint={2206.05575},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url = {https://arxiv.org/abs/2206.05575},
+      html = {https://arxiv.org/abs/2206.05575},
+      pdf = {mammodl.pdf},
+      code = {https://github.com/ramyamut/MammoFL}
 }
 
 @article{deepresection,
@@ -49,5 +31,24 @@ code = {https://github.com/tcama/DeepResection},
 selected = {true},
 author = {T. Campbell Arnold and Ramya Muthukrishnan and Akash R. Pattnaik and Nishant Sinha and Adam Gibson and Hannah Gonzalez and Sandhitsu R. Das and Brian Litt and Dario J. Englot and Victoria L. Morgan and Kathryn A. Davis and Joel M. Stein},
 keywords = {Postoperative MRI, Temporal lobe epilepsy, Resection cavity, Automated segmentation, Convolutional neural network, Hippocampal remnant},
-abstract = {Accurate segmentation of surgical resection sites is critical for clinical assessments and neuroimaging research applications, including resection extent determination, predictive modeling of surgery outcome, and masking image processing near resection sites. In this study, an automated resection cavity segmentation algorithm is developed for analyzing postoperative MRI of epilepsy patients and deployed in an easy-to-use graphical user interface (GUI) that estimates remnant brain volumes, including postsurgical hippocampal remnant tissue. This retrospective study included postoperative T1-weighted MRI from 62 temporal lobe epilepsy (TLE) patients who underwent resective surgery. The resection site was manually segmented and reviewed by a neuroradiologist (JMS). A majority vote ensemble algorithm was used to segment surgical resections, using 3 U-Net convolutional neural networks trained on axial, coronal, and sagittal slices, respectively. The algorithm was trained using 5-fold cross validation, with data partitioned into training (N = 27) testing (N = 9), and validation (N = 9) sets, and evaluated on a separate held-out test set (N = 17). Algorithm performance was assessed using Dice-Sørensen coefficient (DSC), Hausdorff distance, and volume estimates. Additionally, we deploy a fully-automated, GUI-based pipeline that compares resection segmentations with preoperative imaging and reports estimates of resected brain structures. The cross-validation and held-out test median DSCs were 0.84 ± 0.08 and 0.74 ± 0.22 (median ± interquartile range) respectively, which approach inter-rater reliability between radiologists (0.84–0.86) as reported in the literature. Median 95 % Hausdorff distances were 3.6 mm and 4.0 mm respectively, indicating high segmentation boundary confidence. Automated and manual resection volume estimates were highly correlated for both cross-validation (r = 0.94, p < 0.0001) and held-out test subjects (r = 0.87, p < 0.0001). Automated and manual segmentations overlapped in all 62 subjects, indicating a low false negative rate. In control subjects (N = 40), the classifier segmented no voxels (N = 33), <50 voxels (N = 5), or a small volumes<0.5 cm3 (N = 2), indicating a low false positive rate that can be controlled via thresholding. There was strong agreement between postoperative hippocampal remnant volumes determined using automated and manual resection segmentations (r = 0.90, p < 0.0001, mean absolute error = 6.3 %), indicating that automated resection segmentations can permit quantification of postoperative brain volumes after epilepsy surgery. Applications include quantification of postoperative remnant brain volumes, correction of deformable registration, and localization of removed brain regions for network modeling.}
+abstract = {Accurate segmentation of surgical resection sites is critical for clinical assessments and neuroimaging research applications, including resection extent determination, predictive modeling of surgery outcome, and masking image processing near resection sites. In this study, an automated resection cavity segmentation algorithm is developed for analyzing postoperative MRI of epilepsy patients and deployed in an easy-to-use graphical user interface (GUI) that estimates remnant brain volumes, including postsurgical hippocampal remnant tissue. This retrospective study included postoperative T1-weighted MRI from 62 temporal lobe epilepsy (TLE) patients who underwent resective surgery. The resection site was manually segmented and reviewed by a neuroradiologist (JMS). A majority vote ensemble algorithm was used to segment surgical resections, using 3 U-Net convolutional neural networks trained on axial, coronal, and sagittal slices, respectively. The algorithm was trained using 5-fold cross validation, with data partitioned into training (N = 27) testing (N = 9), and validation (N = 9) sets, and evaluated on a separate held-out test set (N = 17). Algorithm performance was assessed using Dice-Sørensen coefficient (DSC), Hausdorff distance, and volume estimates. Additionally, we deploy a fully-automated, GUI-based pipeline that compares resection segmentations with preoperative imaging and reports estimates of resected brain structures. The cross-validation and held-out test median DSCs were 0.84 ± 0.08 and 0.74 ± 0.22 (median ± interquartile range) respectively, which approach inter-rater reliability between radiologists (0.84–0.86) as reported in the literature. Median 95\% Hausdorff distances were 3.6 mm and 4.0 mm respectively, indicating high segmentation boundary confidence. Automated and manual resection volume estimates were highly correlated for both cross-validation (r = 0.94, p < 0.0001) and held-out test subjects (r = 0.87, p < 0.0001). Automated and manual segmentations overlapped in all 62 subjects, indicating a low false negative rate. In control subjects (N = 40), the classifier segmented no voxels (N = 33), <50 voxels (N = 5), or a small volumes<0.5 cm3 (N = 2), indicating a low false positive rate that can be controlled via thresholding. There was strong agreement between postoperative hippocampal remnant volumes determined using automated and manual resection segmentations (r = 0.90, p < 0.0001, mean absolute error = 6.3 %), indicating that automated resection segmentations can permit quantification of postoperative brain volumes after epilepsy surgery. Applications include quantification of postoperative remnant brain volumes, correction of deformable registration, and localization of removed brain regions for network modeling.}
+}
+
+@article{nlp,
+abbr = {JAMIA},
+author = {Xie, Kevin and Gallagher, Ryan S and Conrad, Erin C and Garrick, Chadric O and Baldassano, Steven N and Bernabei, John M and Galer, Peter D and Ghosn, Nina J and Greenblatt, Adam S and Jennings, Tara and Kornspun, Alana and Kulick-Soper, Catherine V and Panchal, Jal M and Pattnaik, Akash R and Scheid, Brittany H and Wei, Danmeng and Weitzman, Micah and Muthukrishnan, Ramya and Kim, Joongwon and Litt, Brian and Ellis, Colin A and Roth, Dan},
+title = {Extracting seizure frequency from epilepsy clinic notes: a machine reading approach to natural language processing},
+    journal = {Journal of the American Medical Informatics Association},
+    volume = {29},
+    number = {5},
+    pages = {873-881},
+    year = {2022},
+    month = {02},
+    abstract = {Seizure frequency and seizure freedom are among the most important outcome measures for patients with epilepsy. In this study, we aimed to automatically extract this clinical information from unstructured text in clinical notes. If successful, this could improve clinical decision-making in epilepsy patients and allow for rapid, large-scale retrospective research.We developed a finetuning pipeline for pretrained neural models to classify patients as being seizure-free and to extract text containing their seizure frequency and date of last seizure from clinical notes. We annotated 1000 notes for use as training and testing data and determined how well 3 pretrained neural models, BERT, RoBERTa, and Bio\_ClinicalBERT, could identify and extract the desired information after finetuning.The finetuned models (BERTFT, Bio\_ClinicalBERTFT, and RoBERTaFT) achieved near-human performance when classifying patients as seizure free, with BERTFT and Bio\_ClinicalBERTFT achieving accuracy scores over 80\\%. All 3 models also achieved human performance when extracting seizure frequency and date of last seizure, with overall F1 scores over 0.80. The best combination of models was Bio\_ClinicalBERTFT for classification, and RoBERTaFT for text extraction. Most of the gains in performance due to finetuning required roughly 70 annotated notes.Our novel machine reading approach to extracting important clinical outcomes performed at or near human performance on several tasks. This approach opens new possibilities to support clinical practice and conduct large-scale retrospective clinical research. Future studies can use our finetuning pipeline with minimal training annotations to answer new clinical questions.},
+    issn = {1527-974X},
+    doi = {10.1093/jamia/ocac018},
+    url = {https://doi.org/10.1093/jamia/ocac018},
+    html = {https://academic.oup.com/jamia/article/29/5/873/6534112},
+    pdf = {nlp.pdf},
+    eprint = {https://academic.oup.com/jamia/article-pdf/29/5/873/43372456/ocac018.pdf}
 }
