@@ -34,6 +34,111 @@ keywords = {Postoperative MRI, Temporal lobe epilepsy, Resection cavity, Automat
 abstract = {Accurate segmentation of surgical resection sites is critical for clinical assessments and neuroimaging research applications, including resection extent determination, predictive modeling of surgery outcome, and masking image processing near resection sites. In this study, an automated resection cavity segmentation algorithm is developed for analyzing postoperative MRI of epilepsy patients and deployed in an easy-to-use graphical user interface (GUI) that estimates remnant brain volumes, including postsurgical hippocampal remnant tissue. This retrospective study included postoperative T1-weighted MRI from 62 temporal lobe epilepsy (TLE) patients who underwent resective surgery. The resection site was manually segmented and reviewed by a neuroradiologist (JMS). A majority vote ensemble algorithm was used to segment surgical resections, using 3 U-Net convolutional neural networks trained on axial, coronal, and sagittal slices, respectively. The algorithm was trained using 5-fold cross validation, with data partitioned into training (N = 27) testing (N = 9), and validation (N = 9) sets, and evaluated on a separate held-out test set (N = 17). Algorithm performance was assessed using Dice-Sørensen coefficient (DSC), Hausdorff distance, and volume estimates. Additionally, we deploy a fully-automated, GUI-based pipeline that compares resection segmentations with preoperative imaging and reports estimates of resected brain structures. The cross-validation and held-out test median DSCs were 0.84 ± 0.08 and 0.74 ± 0.22 (median ± interquartile range) respectively, which approach inter-rater reliability between radiologists (0.84–0.86) as reported in the literature. Median 95\% Hausdorff distances were 3.6 mm and 4.0 mm respectively, indicating high segmentation boundary confidence. Automated and manual resection volume estimates were highly correlated for both cross-validation (r = 0.94, p < 0.0001) and held-out test subjects (r = 0.87, p < 0.0001). Automated and manual segmentations overlapped in all 62 subjects, indicating a low false negative rate. In control subjects (N = 40), the classifier segmented no voxels (N = 33), <50 voxels (N = 5), or a small volumes<0.5 cm3 (N = 2), indicating a low false positive rate that can be controlled via thresholding. There was strong agreement between postoperative hippocampal remnant volumes determined using automated and manual resection segmentations (r = 0.90, p < 0.0001, mean absolute error = 6.3 %), indicating that automated resection segmentations can permit quantification of postoperative brain volumes after epilepsy surgery. Applications include quantification of postoperative remnant brain volumes, correction of deformable registration, and localization of removed brain regions for network modeling.}
 }
 
+@article{keypoint,
+abbr={arXiV},
+title = {Spatial regularisation for improved accuracy and interpretability in keypoint-based registration},
+year = {2025},
+doi = {https://doi.org/10.48550/arXiv.2503.04499},
+url = {https://arxiv.org/abs/2503.04499},
+html = {https://arxiv.org/abs/2503.04499},
+pdf = {keypoint.pdf},
+code = {https://github.com/BenBillot/spatial_regularisation},
+selected = {true},
+abstract = {Unsupervised registration strategies bypass requirements in
+ground truth transforms or segmentations by optimising similarity metrics between fixed and moved volumes. Among these methods, a recent subclass of approaches based on unsupervised keypoint detection
+stand out as very promising for interpretability. Specifically, these methods train a network to predict feature maps for fixed and moving images, from which explainable centres of mass are computed to obtain
+point clouds, that are then aligned in closed-form. However, the features returned by the network often yield spatially diffuse patterns that
+are hard to interpret, thus undermining the purpose of keypoint-based
+registration. Here, we propose a three-fold loss to regularise the spatial distribution of the features. First, we use the KL divergence to
+model features as point spread functions that we interpret as probabilistic keypoints. Then, we sharpen the spatial distributions of these
+features to increase the precision of the detected landmarks. Finally, we
+introduce a new repulsive loss across keypoints to encourage spatial diversity. Overall, our loss considerably improves the interpretability of the
+features, which now correspond to precise and anatomically meaningful
+landmarks. We demonstrate our three-fold loss in foetal rigid motion
+tracking and brain MRI affine registration tasks, where it not only outperforms state-of-the-art unsupervised strategies, but also bridges the
+gap with state-of-the-art supervised methods. Our code is available at
+https://github.com/BenBillot/spatial regularisation.},
+author = {Benjamin Billot and Ramya Muthukrishnan and Esra Abaci-Turk and P. Ellen Grant and Nicholas Ayache and Herve Delingette and Polina Golland},
+keywords = {spatial regularisation, interpretable affine registration},
+}
+
+@article{lpac,
+abbr={arXiV},
+title = {LPAC: Learnable perception-action-communication loops with applications to coverage control},
+year = {2025},
+doi = {https://doi.org/10.48550/arXiv.2401.04855},
+url = {https://arxiv.org/abs/2401.04855},
+html = {https://arxiv.org/abs/2401.04855},
+pdf = {lpac.pdf},
+code = {https://github.com/KumarRobotics/CoverageControl},
+selected = {true},
+abstract = {Coverage control is the problem of navigating a
+robot swarm to collaboratively monitor features or a phenomenon of interest not known a priori. The problem is challenging in decentralized settings with robots that have limited
+communication and sensing capabilities. We propose a learnable
+Perception-Action-Communication (LPAC) architecture for the
+problem, wherein a convolution neural network (CNN) processes
+localized perception; a graph neural network (GNN) facilitates
+robot communications; finally, a shallow multi-layer perceptron
+(MLP) computes robot actions. The GNN enables collaboration in
+the robot swarm by computing what information to communicate
+with nearby robots and how to incorporate received information.
+Evaluations show that the LPAC models—trained using imitation
+learning—outperform standard decentralized and centralized
+coverage control algorithms. The learned policy generalizes to
+environments different from the training dataset, transfers to
+larger environments with more robots, and is robust to noisy
+position estimates. The results indicate the suitability of LPAC
+architectures for decentralized navigation in robot swarms to
+achieve collaborative behavior.},
+author = {Saurav Agarwal and Ramya Muthukrishnan and Walker Gosrich and Vijay Kumar and Alejandro Ribeiro},
+keywords = {graph neural networks, coverage control, distributed robot systems, swarm robotics, deep learning methods},
+}
+
+@article{invrt,
+abbr={AAAI},
+title = {InvRT: Solving Radar Inverse Problems with Transformers},
+conference = {AAAI},
+year = {2023},
+url = {https://ai-2-ase.github.io/papers/23%5CSubmission%5Caaai_camera_ready.pdf},
+html = {https://ai-2-ase.github.io/papers/23%5CSubmission%5Caaai_camera_ready.pdf},
+pdf = {invrt.pdf},
+selected = {true},
+abstract = {A wide variety of applications rely on the characterization of
+objects from radar observations. Existing approaches in this
+space primarily focus on inferring object type. In this work,
+we focus on inferring the input parameters of a physics-based
+radar simulator from its output, a temporal sequence of radar
+observations. Sequential radar observations inherently have
+a complex spatio-temporal structure that is difficult to capture with many standard vision-based deep learning architectures. We model such complex phenomena as a sequence
+to sequence prediction problem and use a transformer architecture, taking advantage of its ability to capture contextual
+temporal dependencies. We demonstrate that our method, Inverse Radar Transformer (InvRT), outperforms baseline approaches in predicting object properties, for both high and
+low observability settings. Furthermore, its errors are highly
+correlated with the level of object observability, highlighting
+its potential to learn the geometric limitations of radar sensing.},
+author = {Ramya Muthukrishnan and Justin Goodwin and Adam Kern and Nathan Vaska and Rajmonda S. Caceres},
+}
+
+@article{symmradar,
+abbr={NeurReps},
+title = {Symmetric Models for Radar Response Modeling},
+conference = {NeurIPS Workshop on Symmetry and Geometry in Neural Representations},
+year = {2023},
+url = {https://openreview.net/pdf/58a6239927c9f6263a1c8a6c442dddbad7257978.pdf},
+html = {https://openreview.net/pdf/58a6239927c9f6263a1c8a6c442dddbad7257978.pdf},
+pdf = {symmradar.pdf},
+abstract = {Many radar applications require complex radar signature models that incorporate characteristics of an object’s shape and dynamics as well as sensing effects. Even though high
+fidelity, first-principles radar simulators are available, they tend to be resource intensive
+and do not easily support the requirements of agile and large-scale AI development and
+evaluation frameworks. Deep learning represents an attractive alternative to these numerical
+methods, but can have large data requirements and limited generalization ability. In this
+work, we present the Radar Equivariant Model (REM), the first SO(3)-equivariant model for
+predicting radar responses from object meshes. By constraining our model to the symmetries
+inherent to radar sensing, REM is able to achieve a high-level reconstruction of signals
+generated by a first-principles radar model and shows improved performance and sample
+efficiency.},
+author = {Colin Kohler and Nathan Vaska and Ramya Muthukrishnan and Whangbong Choi and Jung Yeon Park and Justin Goodwin and Rajmonda S. Caceres and Robin Walters},
+}
+
 @article{nlp,
 abbr = {JAMIA},
 author = {Xie, Kevin and Gallagher, Ryan S and Conrad, Erin C and Garrick, Chadric O and Baldassano, Steven N and Bernabei, John M and Galer, Peter D and Ghosn, Nina J and Greenblatt, Adam S and Jennings, Tara and Kornspun, Alana and Kulick-Soper, Catherine V and Panchal, Jal M and Pattnaik, Akash R and Scheid, Brittany H and Wei, Danmeng and Weitzman, Micah and Muthukrishnan, Ramya and Kim, Joongwon and Litt, Brian and Ellis, Colin A and Roth, Dan},
