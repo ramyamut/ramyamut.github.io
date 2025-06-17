@@ -34,6 +34,38 @@ keywords = {Postoperative MRI, Temporal lobe epilepsy, Resection cavity, Automat
 abstract = {Accurate segmentation of surgical resection sites is critical for clinical assessments and neuroimaging research applications, including resection extent determination, predictive modeling of surgery outcome, and masking image processing near resection sites. In this study, an automated resection cavity segmentation algorithm is developed for analyzing postoperative MRI of epilepsy patients and deployed in an easy-to-use graphical user interface (GUI) that estimates remnant brain volumes, including postsurgical hippocampal remnant tissue. This retrospective study included postoperative T1-weighted MRI from 62 temporal lobe epilepsy (TLE) patients who underwent resective surgery. The resection site was manually segmented and reviewed by a neuroradiologist (JMS). A majority vote ensemble algorithm was used to segment surgical resections, using 3 U-Net convolutional neural networks trained on axial, coronal, and sagittal slices, respectively. The algorithm was trained using 5-fold cross validation, with data partitioned into training (N = 27) testing (N = 9), and validation (N = 9) sets, and evaluated on a separate held-out test set (N = 17). Algorithm performance was assessed using Dice-Sørensen coefficient (DSC), Hausdorff distance, and volume estimates. Additionally, we deploy a fully-automated, GUI-based pipeline that compares resection segmentations with preoperative imaging and reports estimates of resected brain structures. The cross-validation and held-out test median DSCs were 0.84 ± 0.08 and 0.74 ± 0.22 (median ± interquartile range) respectively, which approach inter-rater reliability between radiologists (0.84–0.86) as reported in the literature. Median 95\% Hausdorff distances were 3.6 mm and 4.0 mm respectively, indicating high segmentation boundary confidence. Automated and manual resection volume estimates were highly correlated for both cross-validation (r = 0.94, p < 0.0001) and held-out test subjects (r = 0.87, p < 0.0001). Automated and manual segmentations overlapped in all 62 subjects, indicating a low false negative rate. In control subjects (N = 40), the classifier segmented no voxels (N = 33), <50 voxels (N = 5), or a small volumes<0.5 cm3 (N = 2), indicating a low false positive rate that can be controlled via thresholding. There was strong agreement between postoperative hippocampal remnant volumes determined using automated and manual resection segmentations (r = 0.90, p < 0.0001, mean absolute error = 6.3 %), indicating that automated resection segmentations can permit quantification of postoperative brain volumes after epilepsy surgery. Applications include quantification of postoperative remnant brain volumes, correction of deformable registration, and localization of removed brain regions for network modeling.}
 }
 
+@article{e3pose,
+title = {E3-Pose: equivariant symmetry-aware rigid pose estimation in fetal brain MRI},
+year = {2025},
+url = {coming soon},
+code = {https://github.com/ramyamut/E3-Pose},
+selected = {true},
+abstract = { Rigid pose estimation relative to a canon-
+ical coordinate frame is paramount in medical imaging.
+It provides consistent anatomical alignment across time,
+modalities, and subjects, enabling tasks such as regis-
+tration and motion tracking. Here we present E3-Pose, a
+method that estimates a canonical 3D pose from volumetric
+brain MRI. Importantly, E3-Pose uses a E(3)-equivariant
+convolutional neural network that exploits intrinsic spa-
+tial symmetries in rigid pose estimation. In turn, this
+formulation enables us to introduce a novel 9D rotation
+parametrization, which uses regular and pseudovectors
+to tackle ambiguities in contralateral brain symmetry. We
+show that E3-Pose outperforms state-of-the-art methods
+on motion quantification in fetal brain MRI, and that its
+symmetry-driven architectural constraints enable it to gen-
+eralize to challenging and out-of-distribution samples, such
+as younger fetuses with underdeveloped anatomy. Finally,
+we demonstrate utility for the clinical application of auto-
+navigated slice prescription, where extensive simulations
+show that E3-Pose significantly improves brain coverage
+and slice readability. Our code and model are available at
+https://github.com/ramyamut/E3-Pose.},
+author = {Ramya Muthukrishnan and Benjamin Billot and Borjan Gagoski and Matheus D. Soldatelli and P. Ellen Grant and Polina Golland},
+keywords = { equivariant network, canonical pose estimation, symmetry, slice prescription, fetal brain MRI},
+}
+
 @article{keypoint,
 abbr={arXiV},
 title = {Spatial regularisation for improved accuracy and interpretability in keypoint-based registration},
