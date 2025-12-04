@@ -35,44 +35,25 @@ abstract = {Accurate segmentation of surgical resection sites is critical for cl
 }
 
 @article{e3pose,
-title = {E3-Pose: equivariant symmetry-aware rigid pose estimation in fetal brain MRI},
+abbr={arXiV,
+title = {Equivariant symmetry-aware head pose estimation for fetal MRI},
 year = {2025},
-url = {coming soon},
+url = {https://arxiv.org/abs/2512.04890},
 code = {https://github.com/ramyamut/E3-Pose},
+pdf = {e3pose.pdf},
 selected = {true},
-abstract = { Rigid pose estimation relative to a canon-
-ical coordinate frame is paramount in medical imaging.
-It provides consistent anatomical alignment across time,
-modalities, and subjects, enabling tasks such as regis-
-tration and motion tracking. Here we present E3-Pose, a
-method that estimates a canonical 3D pose from volumetric
-brain MRI. Importantly, E3-Pose uses a E(3)-equivariant
-convolutional neural network that exploits intrinsic spa-
-tial symmetries in rigid pose estimation. In turn, this
-formulation enables us to introduce a novel 9D rotation
-parametrization, which uses regular and pseudovectors
-to tackle ambiguities in contralateral brain symmetry. We
-show that E3-Pose outperforms state-of-the-art methods
-on motion quantification in fetal brain MRI, and that its
-symmetry-driven architectural constraints enable it to gen-
-eralize to challenging and out-of-distribution samples, such
-as younger fetuses with underdeveloped anatomy. Finally,
-we demonstrate utility for the clinical application of auto-
-navigated slice prescription, where extensive simulations
-show that E3-Pose significantly improves brain coverage
-and slice readability. Our code and model are available at
-https://github.com/ramyamut/E3-Pose.},
-author = {Ramya Muthukrishnan and Benjamin Billot and Borjan Gagoski and Matheus D. Soldatelli and P. Ellen Grant and Polina Golland},
-keywords = { equivariant network, canonical pose estimation, symmetry, slice prescription, fetal brain MRI},
+abstract = { We present E(3)-Pose, a novel fast pose estimation method that jointly and explicitly models rotation equivariance and object symmetry. Our work is motivated by the challenging problem of accounting for fetal head motion during a diagnostic MRI scan. We aim to enable automatic adaptive prescription of 2D diagnostic MRI slices with 6-DoF head pose estimation, supported by 3D MRI volumes rapidly acquired before each 2D slice. Existing methods struggle to generalize to clinical volumes, due to pose ambiguities induced by inherent anatomical symmetries, as well as low resolution, noise, and artifacts. In contrast, E(3)-Pose captures anatomical symmetries and rigid pose equivariance by construction, and yields robust estimates of the fetal head pose. Our experiments on publicly available and representative clinical fetal MRI datasets demonstrate the superior robustness and generalization of our method across domains. Crucially, E(3)-Pose achieves state-of-the-art accuracy on clinical MRI volumes, paving the way for clinical translation. Our implementation is available at github.com/ramyamut/E3-Pose.},
+author = {Ramya Muthukrishnan and Borjan Gagoski and Aryn Lee and P. Ellen Grant and Elfar Adalsteinsson and Polina Golland and Benjamin Billot},
+keywords = { equivariant network, pose estimation, symmetry, slice prescription, fetal MRI},
 }
 
 @article{keypoint,
-abbr={arXiV},
+abbr={MICCAI},
 title = {Spatial regularisation for improved accuracy and interpretability in keypoint-based registration},
 year = {2025},
 doi = {https://doi.org/10.48550/arXiv.2503.04499},
-url = {https://arxiv.org/abs/2503.04499},
-html = {https://arxiv.org/abs/2503.04499},
+url = {https://link.springer.com/chapter/10.1007/978-3-032-05185-1_56},
+html = {https://link.springer.com/chapter/10.1007/978-3-032-05185-1_56},
 pdf = {keypoint.pdf},
 code = {https://github.com/BenBillot/spatial_regularisation},
 selected = {true},
