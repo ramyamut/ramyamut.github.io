@@ -25,7 +25,7 @@ permalink: /e3-pose/
   <div style="clear: both">
       <div class="row mt-3 text-center">
           <a class="col-sm mt-3 mt-md-0 btn btn-paper mx-2" href="https://arxiv.org/abs/2512.04890">Paper</a>
-          <a class="col-sm mt-3 mt-md-0 btn btn-code mx-2" href="https://github.com/ramyamut/E3-Pose" target="_blank">Code</a>
+          <a class="col-sm mt-3 mt-md-0 btn btn-code mx-2" href="https://github.com/MedicalVisionGroup/E3-Pose" target="_blank">Code</a>
           <a class="col-sm mt-3 mt-md-0 btn btn-code mx-2" href="https://drive.google.com/drive/folders/1r6FVzXG9VLH-0MtMnD2hwjzdDqss1DSE" target="_blank">Model</a>
           <a class="col-sm mt-3 mt-md-0 btn btn-data mx-2" href="https://drive.google.com/file/d/1yO2o2sNNNEfcB_-ZDcVvHyCGxqk6SYyE/view?usp=drive_link" target="_blank">Data</a>
       </div>
@@ -33,7 +33,7 @@ permalink: /e3-pose/
 </div>
 <br>
 <h2 style="text-align: center;">Abstract</h2>
-<p style="text-align: center;">We present E(3)-Pose, a novel fast pose estimation method that jointly and explicitly models rotation equivariance and object symmetry. Our work is motivated by the challenging problem of accounting for fetal head motion during a diagnostic MRI scan. We aim to enable automatic adaptive prescription of 2D diagnostic MRI slices with 6-DoF head pose estimation, supported by 3D MRI volumes rapidly acquired before each 2D slice. Existing methods struggle to generalize to clinical volumes, due to pose ambiguities induced by inherent anatomical symmetries, as well as low resolution, noise, and artifacts. In contrast, E(3)-Pose captures anatomical symmetries and rigid pose equivariance by construction, and yields robust estimates of the fetal head pose. Our experiments on publicly available and representative clinical fetal MRI datasets demonstrate the superior robustness and generalization of our method across domains. Crucially, E(3)-Pose achieves state-of-the-art accuracy on clinical MRI volumes, paving the way for clinical translation.</p>
+<p style="text-align: center;">We present E(3)-Pose, a novel fast pose estimation method that jointly and explicitly models rotation equivariance and object symmetry. Our work is motivated by the challenging problem of accounting for fetal head motion during a diagnostic MRI scan. We aim to enable automatic adaptive prescription of 2D diagnostic MRI slices with 6-DoF head pose estimation, supported by 3D MRI volumes rapidly acquired before each 2D slice. Existing methods struggle to generalize to clinical volumes, due to pose ambiguities induced by inherent anatomical symmetries, as well as low resolution, noise, and artifacts. In contrast, E(3)-Pose captures anatomical symmetries and rigid pose equivariance by construction, and yields robust estimates of the fetal head pose. Our experiments on publicly available and representative clinical fetal MRI datasets demonstrate the superior robustness and generalization of our method across domains. Crucially, E(3)-Pose achieves state-of-the-art accuracy on clinical MRI volumes, supporting future clinical translation.</p>
 
 <h2 style="text-align: center;">Method</h2>
 <div class="row mt-3">
@@ -47,7 +47,7 @@ permalink: /e3-pose/
         {% include figure.html path="/assets/img/method_overview.png" class="img-fluid rounded z-depth-1"%}
 </div>
 <div class="caption">
-    <b>Overview of E(3)-Pose.</b> We first train a CNN \(\psi\) to segment the object. We estimate translation based on the center-of-mass of the predicted mask and then crop the 3D volumes around this mask. The cropped volumes are fed to an E(3)-CNN \(\phi\) trained independently to regress the orthonormal basis of the object frame, parametrized as one pseudovector (red) and two vectors (blue and green). The output is later constrained to represent a rotation matrix by applying SVD and then choosing the pseudovector \(e_x\) direction that results in a proper rotation without reflection (i.e., \(\det(M(\hat{R})) = 1\)).
+    <b>Overview of E(3)-Pose.</b> We first train a CNN \(\psi\) to segment the object. We estimate translation based on the center-of-mass of the predicted mask and then crop the 3D volumes around this mask using a 40% margin. The cropped volumes are fed to an E(3)-CNN \(\phi\) trained independently to regress the orthonormal basis of the object frame, parametrized as one pseudovector (red) and two vectors (blue and green). The output is later constrained to represent a rotation matrix by applying SVD and then choosing the pseudovector \(e_x\) direction that results in a proper rotation without reflection (i.e., \(\det(M(\hat{R})) = 1\)).
 </div>
 
 <h2 style="text-align: center;">Results</h2>
@@ -76,5 +76,5 @@ permalink: /e3-pose/
         {% include video.html path="/assets/video/vnav_shift_2_audio_GOOD.mp4" class="img-fluid rounded z-depth-1" controls=true %}
 </div>
 <div class="caption">
-    <i>Left:</i> the navigator FOV center (red) is dynamically translated to accurately follow the ground-truth fetal head center-of-mass (blue). <i>Middle:</i> our translated navigator volumes minimize the distance between the two. <i>Right:</i> translated navigator volumes align the FOV center (star) with the estimated brain segmentation mask (green outline). The dark bands in the navigator volumes represent spin history artifacts from the 2D diagnostic MRI slices.
+    <i>Left:</i> the navigator FOV center (red) is dynamically translated to accurately follow the ground-truth fetal head center-of-mass (blue). <i>Middle:</i> our translated navigator volumes minimize the distance between the two. <i>Right:</i> translated navigator volumes align the FOV center (star) with the estimated brain segmentation mask (green outline). The dark bands in the navigator volumes represent spin history artifacts from the diagnostic slices.
 </div>
