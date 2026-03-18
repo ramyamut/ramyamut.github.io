@@ -12,8 +12,8 @@ permalink: /e3-pose/
           <div class="col-sm mt-3 mt-md-0 text-center"><a href="https://labs.childrenshospital.org/mortonlab/people/aryn-lee" target="_blank">Aryn<br> Lee</a></div>
           <div class="col-sm mt-3 mt-md-0 text-center"><a href="https://research.childrenshospital.org/researchers/patricia-ellen-grant" target="_blank">P. Ellen<br> Grant</a></div>
           <div class="col-sm mt-3 mt-md-0 text-center"><a href="https://imes.mit.edu/people/adalsteinsson-elfar" target="_blank">Elfar<br> Adalsteinsson</a></div>
-          <div class="col-sm mt-3 mt-md-0 text-center"><a href="https://people.csail.mit.edu/polina/" target="_blank">Polina<br> Golland</a></div>
           <div class="col-sm mt-3 mt-md-0 text-center"><a href="https://bbillot.github.io/" target="_blank">Benjamin<br> Billot</a></div>
+          <div class="col-sm mt-3 mt-md-0 text-center"><a href="https://people.csail.mit.edu/polina/" target="_blank">Polina<br> Golland</a></div>
       </div>
       <div class="row mt-3">
           <div class="col-sm mt-3 mt-md-0 text-center">MIT <br> CSAIL</div>
