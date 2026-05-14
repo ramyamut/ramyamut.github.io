@@ -1,12 +1,12 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Ongoing and previous research projects.
 nav: true
 nav_order: 2
 display_categories: [work, fun]
-horizontal: True
+horizontal: False
 ---
 
 <!-- pages/projects.md -->

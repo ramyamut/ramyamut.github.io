@@ -65,16 +65,6 @@ permalink: /e3-pose/
 
 </div>
 
-<h2 style="text-align: center;">In-utero demo</h2>
+<h2 style="text-align: center;"><i>In utero</i> demos</h2>
 
-<p style="text-align: center;">We implemented a feedback loop system that dynamically translates the navigator field-of-view (FOV) to follow the translational movements of the fetal head. We provide examples in a 31 and 28 week old fetus, respectively.</p>
-
-<div class="row mt-3">
-        {% include video.html path="/assets/video/vnav_shift_1_audio_GOOD.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
-</div>
-<div class="row mt-3">
-        {% include video.html path="/assets/video/vnav_shift_2_audio_GOOD.mp4" class="img-fluid rounded z-depth-1" controls=true %}
-</div>
-<div class="caption">
-    <i>Left:</i> the navigator FOV center (red) is dynamically translated to accurately follow the ground-truth fetal head center-of-mass (blue). <i>Middle:</i> our translated navigator volumes minimize the distance between the two. <i>Right:</i> translated navigator volumes align the FOV center (star) with the estimated brain segmentation mask (green outline). The dark bands in the navigator volumes represent spin history artifacts from the diagnostic slices.
-</div>
+<p style="text-align: center;">We implemented a feedback loop system that deploys E(3)-Pose on a 3T Siemens scanner for real-time, automated slice prescription. We provide <a href="https://ramyamut.github.io/self-driving-mri/" target="_blank">in utero demos</a> in pregnant volunteers.</p>
