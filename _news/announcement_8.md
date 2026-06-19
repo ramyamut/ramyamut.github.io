@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I presented our poster, titled **3D fetal head pose estimation from MRI navigators with equivariant neural networks**, at the 2025 ISMRM Annual Meeting. [Video](assets/video/ismrm.mp4)
+I presented our [poster](assets/video/ismrm.mp4), **3D fetal head pose estimation from MRI navigators with equivariant neural networks**, at the 2025 ISMRM Annual Meeting. 

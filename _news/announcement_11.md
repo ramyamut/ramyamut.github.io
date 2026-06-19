@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Saurav presented our paper on graph neural networks for distributed coverage control in robot swarms, [LPAC: learnable perception-action-communication loops with applications to coverage control](https://arxiv.org/abs/2401.04855), at ICRA 2026.
+Saurav presented our [paper](https://ieeexplore.ieee.org/document/11197042/) **LPAC: learnable perception-action-communication loops with applications to coverage control** at ICRA 2026.
